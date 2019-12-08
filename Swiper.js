@@ -273,7 +273,7 @@ class Swiper extends Component {
       this.resetTopCard()
     }
 
-    if (!this.state.slideGesture) {
+    if (!this.state.slideGesture && gestureState.numberActiveTouches === 0) {
       this.props.onTapCard(this.state.firstCardIndex)
     }
 
